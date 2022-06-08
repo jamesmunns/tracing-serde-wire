@@ -28,7 +28,6 @@ pub struct Packet<'a> {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum TracingWire<'a> {
-    #[serde(borrow)]
     NewSpan {
         id: SerializeId,
         #[serde(borrow)]
