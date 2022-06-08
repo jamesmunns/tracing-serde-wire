@@ -2,7 +2,7 @@
 
 use serde::{Serialize, Deserialize};
 
-use tracing_serde::{
+use tracing_serde_structured::{
     SerializeAttributes,
     SerializeRecord,
     SerializeEvent,
