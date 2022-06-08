@@ -1,0 +1,20 @@
+[package]
+name = "tracing-serde-wire"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dependencies.serde]
+version = "1.0.137"
+default-features = false
+features = ["derive"]
+
+[dependencies.tracing-serde]
+# git = "https://github.com/tokio-rs/tracing/"
+# version = "0.2.0"
+# branch = "master"
+path = "./../../tracing/tracing-serde"
+default-features = false
