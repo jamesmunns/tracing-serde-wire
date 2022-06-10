@@ -27,6 +27,7 @@ pub struct Packet<'a> {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[non_exhaustive]
 pub enum TracingWire<'a> {
     NewSpan {
         id: SerializeId,
@@ -45,5 +46,10 @@ pub enum TracingWire<'a> {
     Event(SerializeEvent<'a>),
     Enter(SerializeId),
     Exit(SerializeId),
+    Close(SerializeId),
+    IdClone {
+        new: SerializeId,
+        old: SerializeId,
+    },
     Other(TWOther),
 }
