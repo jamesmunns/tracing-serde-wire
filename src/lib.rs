@@ -60,6 +60,7 @@ pub struct Packet<'a> {
 /// This enumeration contains all possible event kinds that are produced by tracing-rs,
 /// plus a `TWOther` variant for non-tracing metadata to be sent.
 #[derive(Debug, Serialize, Deserialize)]
+#[non_exhaustive]
 pub enum TracingWire<'a> {
     NewSpan {
         id: SerializeId,
@@ -78,5 +79,10 @@ pub enum TracingWire<'a> {
     Event(SerializeEvent<'a>),
     Enter(SerializeId),
     Exit(SerializeId),
+    Close(SerializeId),
+    IdClone {
+        new: SerializeId,
+        old: SerializeId,
+    },
     Other(TWOther),
 }
