@@ -1,11 +1,11 @@
 [package]
 name = "tracing-serde-wire"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["James Munns <james@onevariable.com>"]
 edition = "2021"
 readme = "README.md"
 repository = "https://github.com/jamesmunns/tracing-serde-wire"
-description = "Wire types for use with tracing-serde-structured"
+description = "Wire types for use with tracing-serde-structured crate"
 license = "Apache-2.0"
 categories = [
     "no-std",
